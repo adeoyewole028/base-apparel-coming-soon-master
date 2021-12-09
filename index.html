@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
     <link
       rel="stylesheet"
@@ -16,7 +16,7 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-    <link rel="stylesheet" href="./main.css"/>
+    <link rel="stylesheet" href="./main.css" />
 
     <title>Frontend Mentor | Base Apparel coming soon page</title>
 
@@ -70,6 +70,9 @@
         font-family: FontAwesome;
         color: red;
         content: "\f06a";
+        position: absolute;
+        margin-left: -100px;
+        margin-top: 12px;
       }
     </style>
   </head>
@@ -95,49 +98,32 @@
               and our launch deals.
             </p>
 
-            <form id="email-form" action="GET" class="form" novalidate>
-              <div class="form-control">
-                <div class="flex">
-                  <div class="form-field">
-                    <input
-                      id="email"
-                      type="email"
-                      autocomplete="off"
-                      name="email"
-                      placeholder="Email Address"
-                      maxlength="35"
-                      class="rounded-full border-white w-80 pl-6 py-2 pr-5"
-                    />
-
-                    <span class="-ml-16"></span>
-                  </div>
-                  <button
-                    class="
-                      shadow-xl
-                      rounded-full
-                      border
-                      bg-red-200
-                      hover:bg-red-100
-                      px-8
-                    "
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="12"
-                      height="20"
-                    >
-                      <path
-                        fill="none"
-                        stroke="#FFF"
-                        stroke-width="2"
-                        d="M1 1l8.836 8.836L1 18.671"
-                      />
-                    </svg>
-                  </button>
-                </div>
-                <small class="small ml-6"></small>
-              </div>
+            <form id="email-form" novalidate>
+              <input
+                id="email"
+                type="email"
+                placeholder="Email Address"
+                maxlength="35"
+                class="rounded-full border w-80 pl-6 py-2 pr-5"
+              />
+              <button
+                type="submit"
+                class="
+                  -ml-16
+                  shadow-xl
+                  rounded-full
+                  border
+                  bg-red-200
+                  hover:bg-red-100
+                  px-8
+                  pt-2
+                  pb-4
+                "
+              >
+                <img src="./images/icon-arrow.svg" alt="icon-arrow" />
+              </button>
             </form>
+            <small class="small ml-6"></small>
           </div>
         </div>
         <div>
@@ -157,11 +143,17 @@
           <div class="p-9">
             <img src="./images/logo.svg" alt="logo" />
           </div>
-          <img class="w-full" src="./images/hero-mobile.jpg" alt="hero-mobile" />
+          <img
+            class="w-full"
+            src="./images/hero-mobile.jpg"
+            alt="hero-mobile"
+          />
         </div>
 
         <div class="mt-16">
-          <h1 class="fh1 uppercase text-5xl text-center tracking-widest">We're</h1>
+          <h1 class="fh1 uppercase text-5xl text-center tracking-widest">
+            We're
+          </h1>
           <h1 class="text-center fh2 uppercase text-5xl tracking-widest">
             coming <br />
             soon
