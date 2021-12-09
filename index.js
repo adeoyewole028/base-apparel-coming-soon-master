@@ -15,8 +15,7 @@ const checkEmail = () => {
   } else if (!isEmail(emailValue)) {
     setErrorFor(email, "Please provide a valid email");
   } else {
-    setErrorFor(email, "");
-    showSuccess(email, "");
+    showSuccess(email, "Email submitted succesfully");
   }
 };
 
@@ -27,13 +26,19 @@ const setErrorFor = (input, message) => {
   formField.classList.add("css-fontawesome");
   const small = document.querySelector("small");
   small.innerText = message;
+  small.style.cssText = 'color:red'
 };
 
-const showSuccess = (input) => {
+
+
+const showSuccess = (input, message) => {
   const formField = input.parentElement;
   formField.classList.remove("error");
   formField.classList.remove("css-fontawesome");
   formField.classList.add("success");
+  const small = document.querySelector("small");
+  small.innerText = message;
+  small.style.cssText = 'color:green'
 };
 
 const isEmail = (email) => {
